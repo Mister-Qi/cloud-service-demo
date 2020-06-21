@@ -1,0 +1,11 @@
+insert into user(id,username,name,age,balance) values(1,'zhang san','san',20,100.00);
+insert into user(id,username,name,age,balance) values(2,'zhang si','san1',20,100.00);
+insert into user(id,username,name,age,balance) values(3,'zhang hong','san1',20,100.00);
+insert into user(id,username,name,age,balance) values(4,'wang wu','san1',20,100.00);
+insert into user(id,username,name,age,balance) values(5,'wu liu','san1',20,100.00);
+insert into user(id,username,name,age,balance) values(6,'zhang san2','san1',20,100.00);
+insert into user(id,username,name,age,balance) values(7,'zhang san3','san1',20,100.00);
+insert into user(id,username,name,age,balance) values(8,'zhang san4','san1',20,100.00);
+insert into user(id,username,name,age,balance) values(9,'zhang san5','san1',20,100.00);
+insert into user(id,username,name,age,balance) values(10,'zhang san6','san1',20,100.00);
+insert into user(id,username,name,age,balance) values(11,'zhang san7','san1',20,100.00);

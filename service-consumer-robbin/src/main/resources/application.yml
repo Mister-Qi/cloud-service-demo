@@ -1,0 +1,20 @@
+# cloud client 
+server:
+  port: 9810
+  servlet:
+    context-path: /consumer
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${server.port}}}
+  client:
+    service-url:
+      #      defaultZone: http://pengpeng:password1@localhost:9800/eureka/  # user a eureka service discovery server
+      defaultZone: http://localhost:7801/eureka/, http://localhost:7802/eureka/
+    healthcheck:
+      enabled: true
+#  server:
+#    enableSelfPreservation: true
+spring:
+  application:
+    name: service-consumer

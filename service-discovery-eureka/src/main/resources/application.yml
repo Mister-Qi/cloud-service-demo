@@ -1,0 +1,21 @@
+#Eureka server
+server:
+  port: 9800
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+
+spring:
+  security:
+    user:
+      name: pengpeng
+      password: password1
+logging:
+  level:
+    root: INFO
