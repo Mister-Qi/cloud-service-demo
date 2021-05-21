@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -8,17 +8,19 @@
 		<version>2.1.4.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.qq.cloud</groupId>
+	<groupId>com.ms.service</groupId>
 	<artifactId>cloud-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<description>Parent module for spring cloud</description>
 	<packaging>pom</packaging>
-	
+
 	<modules>
 		<module>service-consumer-robbin</module>
 		<module>service-discovery-eureka</module>
 		<module>service-provider1</module>
-		<module>service-provider2</module>		
+		<module>service-provider2</module>
+		<module>service-mq-producer</module>
+		<module>service-mq-consumer</module>
 	</modules>
 
 	<properties>

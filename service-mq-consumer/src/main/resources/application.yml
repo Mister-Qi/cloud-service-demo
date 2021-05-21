@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: service-mq-consumer
+  rabbitmq:
+    host: 113.142.133.87
+    port: 5672
+    username: "beidou"
+    password: "beidou@123..."
+    template:
+      mandatory: true
+    cloud:
+      config:
+        discovery:
+          enable: false
+debug: true
+logging:
+  level:
+    root: INFO
+
+# cloud client
+server:
+  port: 9900
+  servlet:
+    context-path: /mq-consumer
+eureka:
+  client:
+    enable: false
+#  instance:
+#    hostname: localhost
+#    instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${server.port}}}
+#  client:
+#    service-url:
+#      #      defaultZone: http://pengpeng:password1@localhost:9800/eureka/  # user a eureka service discovery server
+#      defaultZone: http://localhost:9800/eureka/
+#    healthcheck:
+#      enabled: true
+#  server:
+#    enableSelfPreservation: true

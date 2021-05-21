@@ -23,8 +23,8 @@ logging:
 eureka:
   client:
     service-url:
-      #      defaultZone: http://pengpeng:password1@localhost:9800/eureka/  # user a eureka service discovery server
-      defaultZone: http://localhost:7802/eureka/, http://localhost:9801/eureka/
+            defaultZone: http://pengpeng:password1@localhost:9800/eureka/  # user a eureka service discovery server
+#      defaultZone: http://localhost:7802/eureka/, http://localhost:9801/eureka/
     healthcheck:
       enabled: true
   instance:
