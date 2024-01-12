@@ -1,6 +1,6 @@
-package com.ms.consumer;
+package com.ms.producer;
 
-import com.ms.consumer.config.MqConsumerConfiguration;
+import com.ms.producer.config.MqProducerConfiguration;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.amqp.core.Message;
@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 /**
  * python rabbitmqadmin --host=113.142.133.87 --port 15672 --username=beidou --password=beidou@123... list exchanges
  */
-@SpringBootTest(classes = {MqConsumerApplication.class})
+@SpringBootTest(classes = {MqProducerApplication.class})
 //@AutoConfigureMockMvc
 @Slf4j
 public class RabbitTemplateTest {
@@ -26,17 +26,17 @@ public class RabbitTemplateTest {
     // 通过rabbitTemplate发送消息到指定queue
     @Test
     public void testPublish() {
-        rabbitTemplate.convertAndSend(MqConsumerConfiguration.QUEUE, "hello netty demo..");
-        log.info("send message to queue-{}", MqConsumerConfiguration.QUEUE);
+        rabbitTemplate.convertAndSend(MqProducerConfiguration.QUEUE, "hello netty demo..");
+        log.info("send message to queue-{}", MqProducerConfiguration.QUEUE);
     }
 
 
     // 从指定queue接受消息
     @Test
     public void testReceive() {
-        Message receive = rabbitTemplate.receive(MqConsumerConfiguration.QUEUE);
+        Message receive = rabbitTemplate.receive(MqProducerConfiguration.QUEUE);
         if (receive != null) log.info("received message from Queue={}", receive.getBody());
-        Message timedReceive = rabbitTemplate.receive(MqConsumerConfiguration.QUEUE, 5000L);
+        Message timedReceive = rabbitTemplate.receive(MqProducerConfiguration.QUEUE, 5000L);
         if (timedReceive != null) log.info("timed received message from Queue={}", timedReceive.getBody());
 
     }

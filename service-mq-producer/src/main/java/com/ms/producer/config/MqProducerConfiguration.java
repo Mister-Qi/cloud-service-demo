@@ -1,4 +1,4 @@
-package com.ms.consumer.config;
+package com.ms.producer.config;
 
 
 import org.springframework.amqp.core.Binding;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class MqConsumerConfiguration {
+public class MqProducerConfiguration {
 
     public static final String QUEUE = "netty-queue";
 
